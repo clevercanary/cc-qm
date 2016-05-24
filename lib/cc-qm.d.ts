@@ -30,7 +30,7 @@ interface RequestParams {
     }
 }
 
-type RegexOptions = "i"|"m"|"im"|"mi"
+type RegexOptions = ""|"i"|"m"|"im"|"mi"
 
 export class QueryModel {
     
@@ -67,7 +67,7 @@ export class QueryModel {
     
     addLtQueryFilter(fieldName: string, value: any): void;
     
-    addRegexpQueryFilter(fieldName: string, value: string, options?: string): void;
+    addRegexpQueryFilter(fieldName: string, value: string, options?: RegexOptions): void;
     
     addMatchQueryFilter(fieldName: string, value: any): void;
     
