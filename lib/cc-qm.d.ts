@@ -8,6 +8,7 @@ interface QueryFilter {
     filterType: string;
     fieldName: string;
     value: any|any[];
+    options?: any;
 }
 
 interface ConditionalFilter {
@@ -89,6 +90,8 @@ export class QueryModel {
     buildSizeQueryFilter(fieldName: string, value: any): QueryFilter;
     
     buildMatchQueryFilter(fieldName: string, value: any): QueryFilter;
+    
+    buildRegexpQueryFilter(fieldName: string, value: string, options?: RegexOptions): QueryFilter
     
     buildAndQueryFilter(conditions: QueryFilter[]): ConditionalFilter;
     
