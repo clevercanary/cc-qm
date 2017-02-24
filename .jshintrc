@@ -1,7 +1,0 @@
-{
-  "forin": true,
-  "newcap": true,
-  "quotmark": "double",
-  "esnext": true,
-  "node": true
-}

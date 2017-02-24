@@ -1,9 +1,16 @@
 {
   "name": "cc-qm",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "author": "",
   "license": "ISC",
-  "typings": "./lib/cc-qm.d.ts"
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist & tsc"
+  },
+  "devDependencies": {
+    "typescript": "^2.2.1",
+    "typings": "1.4.0"
+  }
 }
