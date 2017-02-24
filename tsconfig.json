@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "sourceMap": true,
+    "declaration": true,
+    "noImplicitAny": true,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "typeRoots": ["typings/globals", "typings/modules"],
+    "lib": ["es6"]
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "lib"
+  ]
+}
