@@ -238,6 +238,10 @@ var QueryModel = (function () {
      */
     QueryModel.prototype.setDistinct = function (distinct) {
         this.distinct = distinct;
+        this.fn = {
+            name: queryfunction_1.FUNCTION_NAMES.DISTINCT
+        };
+        this.clearPagination();
         return this;
     };
     /**
