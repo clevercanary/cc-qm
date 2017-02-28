@@ -287,6 +287,12 @@ export class QueryModel {
      */
     setDistinct(distinct: string): QueryModel {
         this.distinct = distinct;
+        this.fn = {
+            name: FUNCTION_NAMES.DISTINCT
+        };
+        
+        this.clearPagination();
+
         return this;
     }
 
