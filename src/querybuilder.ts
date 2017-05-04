@@ -138,6 +138,10 @@ function addFilters(query: Query<any>, filters: Filter[]): void {
 
             query.where(filter.fieldName).size(filter.value);
         }
+        else if (filterType === FILTER_TYPES.EXISTS) {
+
+            query.where(filter.fieldName).exists(filter.value);
+        }
         else {
             throw new Error(`Unrecognized filter type in queryBuilder.addFilters: ${filter.filterType}`);
         }

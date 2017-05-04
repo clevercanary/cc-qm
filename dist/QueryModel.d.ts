@@ -198,6 +198,14 @@ export declare class QueryModel {
      * ADD FILTERS
      */
     /**
+     * Add EXISTS Query Filter
+     *
+     * @param fieldName
+     * @param value
+     * @returns {QueryModel}
+     */
+    addExistsQueryFilter(fieldName: string, value: boolean): QueryModel;
+    /**
      * Add EQUALS Query Filter
      *
      * @param fieldName
@@ -277,6 +285,14 @@ export declare class QueryModel {
     /**
      * BUILD FILTERS
      */
+    /**
+     * Build EXISTS Query Filter
+     *
+     * @param fieldName
+     * @param value
+     * @returns {QueryFilter}
+     */
+    buildExistsQueryFilter(fieldName: string, value: boolean): QueryFilter;
     /**
      * Build EQUALS Query Filter
      *

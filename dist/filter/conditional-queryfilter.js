@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 exports.CONDITIONAL_FILTER_TYPES = {
     OR: "OR",
     AND: "AND"

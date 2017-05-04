@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * CC Query Model
  */
@@ -290,6 +289,18 @@ var QueryModel = (function () {
      * ADD FILTERS
      */
     /**
+     * Add EXISTS Query Filter
+     *
+     * @param fieldName
+     * @param value
+     * @returns {QueryModel}
+     */
+    QueryModel.prototype.addExistsQueryFilter = function (fieldName, value) {
+        var filter = this.buildExistsQueryFilter(fieldName, value);
+        this.filters.push(filter);
+        return this;
+    };
+    /**
      * Add EQUALS Query Filter
      *
      * @param fieldName
@@ -409,6 +420,20 @@ var QueryModel = (function () {
     /**
      * BUILD FILTERS
      */
+    /**
+     * Build EXISTS Query Filter
+     *
+     * @param fieldName
+     * @param value
+     * @returns {QueryFilter}
+     */
+    QueryModel.prototype.buildExistsQueryFilter = function (fieldName, value) {
+        return {
+            filterType: queryfilter_1.FILTER_TYPES.EXISTS,
+            fieldName: fieldName,
+            value: value
+        };
+    };
     /**
      * Build EQUALS Query Filter
      *

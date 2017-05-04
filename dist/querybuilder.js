@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var conditional_queryfilter_1 = require("./filter/conditional-queryfilter");
 var queryfilter_1 = require("./filter/queryfilter");
 var queryfunction_1 = require("./queryfunction");
@@ -99,6 +98,9 @@ function addFilters(query, filters) {
         }
         else if (filterType === queryfilter_1.FILTER_TYPES.SIZE) {
             query.where(filter.fieldName).size(filter.value);
+        }
+        else if (filterType === queryfilter_1.FILTER_TYPES.EXISTS) {
+            query.where(filter.fieldName).exists(filter.value);
         }
         else {
             throw new Error("Unrecognized filter type in queryBuilder.addFilters: " + filter.filterType);

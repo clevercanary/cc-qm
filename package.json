@@ -1,6 +1,6 @@
 {
   "name": "cc-qm",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "",
   "main": "dist/index.js",
   "author": "",
@@ -10,7 +10,7 @@
     "build": "rm -rf dist & tsc"
   },
   "devDependencies": {
-    "typescript": "^2.2.1",
+    "typescript": "2.1.x",
     "typings": "1.4.0"
   }
 }

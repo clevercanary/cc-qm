@@ -348,6 +348,20 @@ export class QueryModel {
      */
 
     /**
+     * Add EXISTS Query Filter
+     *
+     * @param fieldName
+     * @param value
+     * @returns {QueryModel}
+     */
+    addExistsQueryFilter(fieldName: string, value: boolean): QueryModel {
+
+        const filter = this.buildExistsQueryFilter(fieldName, value);
+        this.filters.push(filter);
+        return this;
+    }
+
+    /**
      * Add EQUALS Query Filter
      *
      * @param fieldName
@@ -490,6 +504,22 @@ export class QueryModel {
     /**
      * BUILD FILTERS
      */
+
+    /**
+     * Build EXISTS Query Filter
+     *
+     * @param fieldName
+     * @param value
+     * @returns {QueryFilter}
+     */
+    buildExistsQueryFilter(fieldName: string, value: boolean): QueryFilter {
+
+        return {
+            filterType: FILTER_TYPES.EXISTS,
+            fieldName: fieldName,
+            value: value
+        }
+    }
 
     /**
      * Build EQUALS Query Filter

@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 exports.FUNCTION_NAMES = {
     COUNT: "COUNT",
     DISTINCT: "DISTINCT"

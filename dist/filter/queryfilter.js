@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 exports.FILTER_TYPES = {
     EQUALS: "EQUALS",
     IN: "IN",
@@ -8,7 +7,8 @@ exports.FILTER_TYPES = {
     LT: "LT",
     SIZE: "SIZE",
     MATCH: "MATCH",
-    REGEXP: "REGEXP"
+    REGEXP: "REGEXP",
+    EXISTS: "EXISTS"
 };
 var QueryFilter = (function () {
     function QueryFilter() {

@@ -7,6 +7,7 @@ export interface Filters {
     SIZE: "SIZE";
     MATCH: "MATCH";
     REGEXP: "REGEXP";
+    EXISTS: "EXISTS";
 }
 export const FILTER_TYPES: Filters = {
     EQUALS: "EQUALS",
@@ -16,7 +17,8 @@ export const FILTER_TYPES: Filters = {
     LT: "LT",
     SIZE: "SIZE",
     MATCH: "MATCH",
-    REGEXP: "REGEXP"
+    REGEXP: "REGEXP",
+    EXISTS: "EXISTS"
 };
 
 export type FilterOperator = keyof Filters;
